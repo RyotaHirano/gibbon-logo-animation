@@ -2,6 +2,7 @@ import $ from 'jquery';
 import resizeStageWidth from './util/resizeStageWidth';
 import DrawSvg from './util/DrawSvg';
 const logoData = require('./data/gibbon-logo.json');
+const colorData = require('./data/color.json');
 const logo = 'GIBbON';
 
 const xmlns = 'http://www.w3.org/2000/svg';
@@ -49,9 +50,9 @@ const addStageChara = (stage, chara, charaData, startType, inOrder) => {
     svgElem.style.display = 'block';
 
     stage.append(svgElem);
-    const color = '#231815'
 
-    charaData.slice().map(item => {
+    charaData.slice().map((item, i) => {
+      const color = colorData[i + ''];
       createPath(item, svgElem, color, startType, inOrder);
     });
     count++;
