@@ -61,6 +61,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var logoData = __webpack_require__(4);
+	var colorData = __webpack_require__(5);
 	var logo = 'GIBbON';
 
 	var xmlns = 'http://www.w3.org/2000/svg';
@@ -109,9 +110,9 @@
 	      svgElem.style.display = 'block';
 
 	      stage.append(svgElem);
-	      var color = '#231815';
 
-	      charaData.slice().map(function (item) {
+	      charaData.slice().map(function (item, i) {
+	        var color = colorData[i + ''];
 	        createPath(item, svgElem, color, startType, inOrder);
 	      });
 	      count++;
@@ -10344,6 +10345,20 @@
 			],
 			"startType": "true"
 		}
+	};
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	module.exports = {
+		"0": "#cc6666",
+		"1": "#ccbb66",
+		"2": "#88cc66",
+		"3": "#66cc99",
+		"4": "#66aacc",
+		"5": "#7766cc",
+		"6": "#cc66cc"
 	};
 
 /***/ }
