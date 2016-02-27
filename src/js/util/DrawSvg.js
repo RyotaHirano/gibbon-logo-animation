@@ -1,4 +1,5 @@
-const frame = 25;
+const frame = 30;
+const rate = 0.1;
 let drawElemCount = 0;
 
 window.requestAnimFrame = (function() {
@@ -59,7 +60,7 @@ export default class DrawSvg {
     // draw speed
     if (inOrder) {
       this.totalFrame = frame;
-      this.duration = drawElemCount * 0.1;
+      this.duration = drawElemCount * rate;
       drawElemCount++;
       if(drawElemCount === 7) {
         drawElemCount = 0;
