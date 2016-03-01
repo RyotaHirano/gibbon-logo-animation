@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import playURL from './util/playURL';
 import resizeStageWidth from './util/resizeStageWidth';
 import DrawSvg from './util/DrawSvg';
 const logoData = require('./data/gibbon-logo.json');
@@ -82,5 +83,7 @@ const init = () => {
   });
 
   playAnimation();
+
+  playURL();
 }
 init();
