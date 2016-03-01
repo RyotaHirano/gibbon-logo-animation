@@ -50,18 +50,22 @@
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
-	var _resizeStageWidth = __webpack_require__(2);
+	var _playURL = __webpack_require__(2);
+
+	var _playURL2 = _interopRequireDefault(_playURL);
+
+	var _resizeStageWidth = __webpack_require__(3);
 
 	var _resizeStageWidth2 = _interopRequireDefault(_resizeStageWidth);
 
-	var _DrawSvg = __webpack_require__(3);
+	var _DrawSvg = __webpack_require__(4);
 
 	var _DrawSvg2 = _interopRequireDefault(_DrawSvg);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var logoData = __webpack_require__(4);
-	var colorData = __webpack_require__(5);
+	var logoData = __webpack_require__(5);
+	var colorData = __webpack_require__(6);
 	var logo = 'GIBbON';
 
 	var xmlns = 'http://www.w3.org/2000/svg';
@@ -143,6 +147,8 @@
 	  });
 
 	  playAnimation();
+
+	  (0, _playURL2.default)();
 	};
 	init();
 
@@ -9990,6 +9996,25 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	exports.default = playURL;
+	function playURL() {
+		var sushiCount = 0;
+
+		setInterval(function () {
+			sushiCount++;
+			window.history.replaceState('', '', Array(sushiCount).join('🍣'));
+		}, 1000);
+	}
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 	exports.default = resizeStageWidth;
@@ -10005,7 +10030,7 @@
 	}
 
 /***/ },
-/* 3 */
+/* 4 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -10123,7 +10148,7 @@
 	exports.default = DrawSvg;
 
 /***/ },
-/* 4 */
+/* 5 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -10349,7 +10374,7 @@
 	};
 
 /***/ },
-/* 5 */
+/* 6 */
 /***/ function(module, exports) {
 
 	module.exports = {
